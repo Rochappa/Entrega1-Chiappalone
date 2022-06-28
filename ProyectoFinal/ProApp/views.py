@@ -99,7 +99,7 @@ def buscar(request):
 
         respuesta = "No enviaste datos"
 
-    return render(request, 'ProApp/inicio.html', {'respuesta': respuesta})
+        return HttpResponse(respuesta)
 
 
 

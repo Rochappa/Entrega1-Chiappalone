@@ -7,21 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    {% if autos %}
+
+    <p>Aca esta</p>
+    {% if modelo %}
 
     <p>Estamos buscando el: {{modelo}}</p>
 
-    <ul>
-	{% for auto in autos %}
-		<li> {{auto.marca}} </li>
-		<li> {{auto.modelo}} </li>
+        
+	{% for modelo in modelos %}
+	    <li> {{modelo.marca}} </li>
+	    <li> {{modelo.modelo}} </li>
 	{% endfor %}
 
-    </ul>
+        
 
     {% endif %}
 
-{% endblock %}
+
 
     
 </body>

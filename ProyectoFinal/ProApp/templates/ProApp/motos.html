@@ -1,0 +1,36 @@
+{% extends 'ProApp/base.html' %}
+
+{% load static %}
+
+{% block ContenidoCambiante %}
+
+<h1>Formulario - Agregar Moto</h1>
+    
+{% if miformulario.errors %}
+
+<p style="color: red;"> Están mal los datos, revisar</p>
+
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    <!-- Acá está la magia de Django-->
+    
+    <table>
+
+        {{ miformulario.as_table }}
+
+
+    </table>
+
+
+    <input type="submit", value="Enviar">
+
+</form>
+
+
+
+
+
+
+{% endblock %}

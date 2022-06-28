@@ -1,0 +1,28 @@
+{% extends 'ProApp/base.html' %}
+
+{% load static %}
+
+{% block ContenidoCambiante %}
+    
+<h1></h1>
+  
+
+<h3>Podes buscar un modelo:</h3>
+
+<form action="/ProApp/resultado_busqueda/" method="GET">
+
+    <input type="text" name="busca" id="modelo">
+
+    <input type="submit" value="Buscar">
+
+
+
+
+</form>
+
+
+
+
+{% endblock %}
+
+

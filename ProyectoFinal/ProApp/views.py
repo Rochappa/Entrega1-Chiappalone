@@ -86,14 +86,11 @@ def buscar(request):
         modelo = request.GET['busca']
 
         autos = Autos.objects.filter(modelo__icontains=modelo)
-
-        # anio = Autos.objects.filter(modelo__icontains=modelo)
-
-        # color = Autos.objects.filter(modelo__icontains=modelo)
+        
 
 
         return render(request, "ProApp/resultado_busqueda.html", {"autos":autos, "modelo":modelo})
-        # return render(request, "ProApp/busqueda.html", {"marca":marca, "modelo":modelo, 'anio':anio, 'color':color})        
+        
     
     else:
 
